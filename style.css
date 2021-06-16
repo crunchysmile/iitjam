@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: 0.7s ease-in-out;
+    scroll-behavior: smooth;
 }
 /* common used classes starts */
 .fnt-sans{
@@ -20,7 +22,6 @@
     position:sticky;
     top: 1px;
     z-index:5;
-
 }
 /* common used classes ends */
 .goal-top{
@@ -55,7 +56,25 @@
     background-color: black;
     margin-bottom: 2px;
     border-radius: 3px;
+    transition: 0.7s ease-in-out;
 }
+.contents-in-detail .top{
+    padding-top: 15vh;
+}
+.take-sub{
+    padding-top: 17vh;
+}
+ /* menu cross bar starts*/
+ .change .div1 {
+    transform: rotate(45deg) translateY(7px) translateX(1px);      
+    background-color: red;
+  }
+  .change .div2 {opacity: 0;}
+  .change .div3 {
+    transform: rotate(-45deg) translateY(-7px) translateX(1px);
+    background-color: red;
+  }
+   /* menu cross bar ends */
 .menu{
     display: none;
 }
@@ -101,6 +120,8 @@
     color: rgb(255, 255, 255) !important;
     background-color: rgb(243, 167, 26);
 }
+ 
+
 .menu-contents ul a:hover{
     color: rgb(255, 255, 255);
     background-color: rgb(243, 167, 26);
@@ -111,6 +132,7 @@
     width: 60%;
     /* height: 1200px; */
     padding-left: 3vw;
+    margin-top: 5vh;
 }
 .about-me h1{
     font-family: sans-serif;
@@ -133,9 +155,12 @@
     float: left;
     margin-top: 5vh;
     width:30%;
+
 }
 .abt-desc-img img{
     max-width: 100%;
+    position: relative;
+    z-index: -1;
 }
 .abt-desc::after {
     content: "";
@@ -238,6 +263,7 @@
     position: absolute;
     right: 0;
     /* background-color: #464141; */
+    margin-top: 5vh;
 }
 .faq h1{
     position: sticky;
@@ -277,6 +303,7 @@ footer{
     background-color: rgb(27, 4, 230);
     color: white;
 }
+ 
 /* for mobile */
 @media screen and (min-width:320px) and (max-width:641px){
     .goal-top{
@@ -286,10 +313,15 @@ footer{
         display: none;
     }
     .menu-contents{
-        display: none;
-    }
+        display:none;
+     }
+     .showMenus{
+         display: block;
+         width: 55%;
+     }
     .about-me{
         width:100%;
+        margin-top: 0;
     }
     .about-me p{
         width: 70%;
@@ -344,7 +376,12 @@ footer{
         display: none;
     }
     .menu-contents{
-        display: none;
+       display:none;
+       transition: 0.7s ease-in-out;
+    }
+    .showMenus{
+        display: block;
+        width: 35%;
     }
     .about-me{
         width:60%;
@@ -371,6 +408,7 @@ footer{
         width:40%;
         margin-left: 10px;
     }
+    
 }
 /* for laptop */
 @media screen and (min-width:1000px) and (max-width:1200px){
@@ -381,4 +419,5 @@ footer{
         position:sticky;
         top:20vh;
     } */
+    
 }
