@@ -22,11 +22,12 @@
                 <a href="#">Take Subscription</a>
             </div>
             <!-- menu button -->
-            <div class="menu">
+            <div id="menu" class="menu" onclick="makeCros(this)" >
                 <div class="div1 menu-bar"></div>
                 <div class="div2 menu-bar"></div>
                 <div class="div3 menu-bar"></div>
             </div>
+            
             <hr style="height:3px;border-bottom: 1px solid rgb(255, 3, 3);">
     </div>
     
@@ -39,19 +40,19 @@
         <div class="menu-contents-back">
            Here is only white content
         </div>
-        <div class="menu-contents">
+        <div class="menu-contents" id="menu-contents">
             <ul class="flx-clm">
-                <li class="flx-clm"><a class="flx-clm active" href="">About Me</a></li>
-                <li class="flx-clm"><a class="flx-clm" href="">Special Theory of Relativity</a></li>
-                <li class="flx-clm"><a class="flx-clm" href="">Matrices-full free</a></li>
-                <li class="flx-clm"><a class="flx-clm" href="">Contents in brief</a></li>
-                <li class="flx-clm"><a class="flx-clm" href="">Vector analysis-full</a></li>
-                <li class="flx-clm"><a class="flx-clm" href="">Complex Analysis-full</a></li>
-                <li class="flx-clm"><a class="flx-clm" href="">Differential equations-full</a></li>
-                <li class="flx-clm"><a class="flx-clm" href="">Magnetostatics-full</a></li>
-                <li class="flx-clm"><a class="flx-clm" href="">Solid state physics-full</a></li>
-                <li class="flx-clm"><a class="flx-clm" href="">Basic optics</a></li>
-                <li class="flx-clm"><a class="flx-clm" href="">Unit wise TEST</a></li>
+                <li class="flx-clm"><a class="flx-clm active about" href="#about-me">About Me</a></li>
+                <li class="flx-clm"><a class="flx-clm special" href="#special-theory">Special Theory of Relativity</a></li>
+                <li class="flx-clm"><a class="flx-clm matrices" href="#matrices">Matrices-full free</a></li>
+                <li class="flx-clm"><a class="flx-clm content-brf" href="">Contents in brief</a></li>
+                <li class="flx-clm"><a class="flx-clm vector" href="#vector">Vector analysis-full</a></li>
+                <li class="flx-clm"><a class="flx-clm complex" href="#complex-analysis">Complex Analysis-full</a></li>
+                <li class="flx-clm"><a class="flx-clm differential" href="#differential">Differential equations-full</a></li>
+                <li class="flx-clm"><a class="flx-clm magnetostatics" href="#magnetostatics">Magnetostatics-full</a></li>
+                <li class="flx-clm"><a class="flx-clm solid" href="#solid">Solid state physics-full</a></li>
+                <li class="flx-clm"><a class="flx-clm basic-op" href="#oscillations-waves-optic">Basic optics</a></li>
+                <li class="flx-clm"><a class="flx-clm unit-tst" href="#unit-wise-test">Unit wise TEST</a></li>
                 <li class="flx-clm"><a class="flx-clm" href="http://tinyurl.com/practice-shanu">FREE Practice question
                         class</a></li>
             </ul>
@@ -59,7 +60,7 @@
         <!-- menu contents ends-->
 
         <!-- About Me and all starts -->
-        <div class="about-me all-contents">
+        <div class="about-me all-contents top" id="about-me">
             <div class="abt-desc">
                 <div class="abt-desc-text">
                     <h1>About Me</h1>
@@ -70,7 +71,7 @@
                         Msc Physics , IIT bombay <br>
                         Plus educator, Unacademy <br>
                         Below are the links of my TOP FREE courses on Unacademy. Log in to 
-                        Unacademy and use unlock code-<b style="color:rgb(255, 11, 11)">Arora10</b> to access these classes in free.
+                        Unacademy and use <u> unlock  code-<b style="color: red;font-family: sans-serif; font-size:15px;">Arora10</b></u> to access these classes in free.
                     </p>
                 </div>
                 <div class="abt-desc-img">
@@ -79,27 +80,32 @@
             </div>
 
             <!-- all study contents and materials starts-->
-            <div class="all-study-content">
-                <p>
-                    <h2 class="flx-clm">Study Contents in Brief</h2>
-                    <div class="content-in-brf">
-                        <button id="btn-spl-th"><a class="flx-clm" href="">Special Theory of Relativity</a></button>
-                        <button id="btn-mtrices"><a class="flx-clm" href="">Matrices-full free</a></button>
-                        <button id="btn-vector"><a class="flx-clm" href="">Vector analysis-full</a></button>
-                        <button id="btn-complex"><a class="flx-clm" href="">Complex Analysis-full</a></button>
-                        <button id="btn-dfrncl"><a class="flx-clm" href="">Differential equations-full</a></button>
-                        <button id="btn-Magn"><a class="flx-clm" href="">Magnetostatics-full</a></button>
-                        <button id="btn-solid"><a class="flx-clm" href="">Solid state physics-full</a></button>
-                        <button id="btn-optics"><a class="flx-clm" href="">Basic optics</a></button>
-                        <button id="btn-unit-test"><a class="flx-clm" href="">Unit wise TEST</a></button>
-                        <button id="faq"><a class="flx-clm" href="">Unacademy Subscription</a></button>
-                    </div>
-                </p>
+            <div class="all-study-content top" >
+
+                <!-- contents in brief -->
+                <div class="top" id="contents-brf">
+                    <p>
+                        <h2 class="flx-clm">Study Contents in Brief</h2>
+                        <div class="content-in-brf">
+                            <button id="btn-spl-th"><a class="flx-clm" href="#special-theory">Special Theory of Relativity</a></button>
+                            <button id="btn-mtrices"><a class="flx-clm" href="#matrices">Matrices-full free</a></button>
+                            <button id="btn-vector"><a class="flx-clm" href="#vector">Vector analysis-full</a></button>
+                            <button id="btn-complex"><a class="flx-clm" href="#complex-analysis">Complex Analysis-full</a></button>
+                            <button id="btn-dfrncl"><a class="flx-clm" href="#differential">Differential equations-full</a></button>
+                            <button id="btn-Magn"><a class="flx-clm" href="#magnetostatics">Magnetostatics-full</a></button>
+                            <button id="btn-solid"><a class="flx-clm" href="#solid">Solid state physics-full</a></button>
+                            <button id="btn-optics"><a class="flx-clm" href="#oscillations-waves-optic">Basic optics</a></button>
+                            <button id="btn-unit-test"><a class="flx-clm" href="#unit-wise-test">Unit wise TEST</a></button>
+                            <button id="faq"><a class="flx-clm" href="#take-sub">Unacademy Subscription</a></button>
+                        </div>
+                    </p>
+                </div>
+               
 
                 <!-- all Study contents in details starts-->
-                <div class="contents-in-detail">
+                <div class="contents-in-detail ">
                     <!-- Special Theory Of Relativity starts-->
-                    <div class="special-theory">
+                    <div class="special-theory top" id="special-theory">
                         <h1>Special Theory Of Relativity</h1>
                         <div class="special-theory-links">
                               <!-- lecture 1 -->
@@ -123,7 +129,7 @@
                     <!-- Special Theory Of Relativity ends-->
 
                     <!-- Matrices (free detail course) starts -->
-                    <div class="matrices">
+                    <div class="matrices top" id="matrices">
                         <h1>Matrices (free detail course)</h1>
                         <div class="matrices-links">
                               <!-- lecture 1 -->
@@ -147,7 +153,7 @@
                     <!-- Matrices (free detail course) Endss -->
 
                     <!-- Vector analysis full (FREE) starts-->
-                    <div class="vector-analysis">
+                    <div class="vector-analysis top" id="vector">
                         <h1>Vector analysis full (FREE)</h1>
                         <div class="vector-links">
                               <!-- lecture 1 -->
@@ -173,7 +179,7 @@
                     <!-- Vector analysis full (FREE) ends-->
 
                     <!-- complex Analysis starts -->
-                    <div class="complex-analysis">
+                    <div class="complex-analysis top" id="complex-analysis">
                         <h1>Complex analysis full course(free)</h1>
                         <div class="complex-links">
                               <!-- lecture 1 -->
@@ -203,7 +209,7 @@
                     <!-- complex Analysis ends -->
 
                     <!-- Differential equation(Full course) starts -->
-                    <div class="differential">
+                    <div class="differential top" id="differential">
                         <h1>Differential equation(Full course)</h1>
                         <div class="differential-links">
                               <!-- lecture 1 -->
@@ -219,7 +225,7 @@
                     <!-- Differential equation(Full course) ends -->
 
                     <!-- SOLID STATE PHYSICS(FREE) starts -->
-                    <div class="solid">
+                    <div class="solid top" id="solid">
                         <h1>SOLID STATE PHYSICS(FREE)</h1>
                         <div class="solid-links">
                               <!-- lecture 1 -->
@@ -235,7 +241,7 @@
                     <!-- SOLID STATE PHYSICS(FREE) endss -->
 
                     <!-- Magnetostatics free course starts -->
-                    <div class="Magnetostatics">
+                    <div class="Magnetostatics top" id="magnetostatics">
                         <h1>Magnetostatics free course</h1>
                         <div class="Magnetostatics-links">
                               <!-- lecture 1 -->
@@ -267,7 +273,7 @@
                     <!-- Magnetostatics free course ends -->
 
                     <!-- Oscillations, Waves and Optics starts -->
-                    <div class="oscillations-waves-optics">
+                    <div class="oscillations-waves-optics top" id="oscillations-waves-optic">
                         <h1>Oscillations, Waves and Optics</h1>
                         <div class="optics-links">
                               <!-- lecture 1 -->
@@ -299,7 +305,7 @@
                     <!-- Oscillations, Waves and Optics ends -->
 
                     <!-- UNIT WISE TEST starts -->
-                    <div class="unit-wise-test">
+                    <div class="unit-wise-test top" id="unit-wise-test">
                         <h1>UNIT WISE TEST</h1>
                         <div class="test-links">
                               <!-- lecture 1 -->
@@ -331,7 +337,7 @@
                     <!-- UNIT WISE TEST ends -->
 
                     <!-- join groups and important materials starts -->
-                    <div class="groups-materials">
+                    <div class="groups-materials top" id="groups-materials">
                         <h1>Important Materials and groups to join</h1>
                         <div class="groups-links">
                               <!-- lecture 1 -->
@@ -379,7 +385,7 @@
             <!-- contact me ends -->
 
             <!-- take subscription starts -->
-             <div class="take-sub">
+             <div class="take-sub " id="take-sub">
                <h1>Unacademy Plus subscription benefits:</h1>
                <h4>Join Unacademy Plus !!</h4>
                <h3>Benefits:</h3>
@@ -514,7 +520,6 @@
     <footer class="flx-clm">
         <div class="all-rights flx-clm">
             All Rights Reserved.
-            
         </div>
     </footer>
 
