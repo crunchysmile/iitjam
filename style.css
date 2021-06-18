@@ -5,6 +5,23 @@
     transition: 0.7s ease-in-out;
     scroll-behavior: smooth;
 }
+.move-top{
+    width: 5vw;
+    height: 5vw;
+    background-color: rgb(35, 12, 240);
+    position: fixed;
+    top: 80vh;
+    right: 3vw;
+    z-index: 2;
+    clip-path: circle(50% at 50% 50%);
+    display: none;
+}
+.move-tool{
+    width: 2vw;
+    height: 2vw;
+    background-color: white;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
 /* common used classes starts */
 .fnt-sans{
     font-family: sans-serif;
@@ -16,12 +33,18 @@
     align-items: center;
 }
 .top-all{
-    width: 100%;
+    /* width: 80%; */
+    max-width: 90%;
+    margin: 0 auto;
     height:17vh;
-    background-color: rgba(255, 255, 255, 0.787);
+    background-color: rgba(61, 55, 55, 0.787);
     position:sticky;
     top: 1px;
     z-index:5;
+}
+a#top-all{
+    display: block;
+    text-decoration: none;
 }
 /* common used classes ends */
 .goal-top{
@@ -37,6 +60,10 @@
     position: sticky;
     position: -webkit-sticky;
     top:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .navbar a{
     text-decoration: none;
@@ -187,9 +214,6 @@
    height: 6vh;
    align-items: flex-start;
 }
-.content-in-brf{
-
-}
 .content-in-brf button{
     display: inline-block;
     width: 45%;
@@ -203,7 +227,7 @@
     color: rgb(255, 255, 255);
     width: 100%;
     height: 100%;
-    font-size: 90%;
+    font-size:1.2vw;
 }
 .content-in-brf button a:hover{
     color: black;
@@ -306,18 +330,40 @@ footer{
  
 /* for mobile */
 @media screen and (min-width:320px) and (max-width:641px){
+    .top-all{
+        height: 20vh;
+    }
     .goal-top{
-        font-size: 3vw;
+        font-size: 5vw;
+        height: 9vh;
+    }
+    .navbar{
+        height: 6vh;
+    }
+    .navbar a{
+        font-size: 4vw;
+        border-right: 1px solid white;
+    }
+    .menu{
+        height: 2vh;
     }
     .menu-contents-back{
         display: none;
     }
     .menu-contents{
         display:none;
+        position: fixed;
+        top: 20vh;
+     }
+     .all-study-content{
+        margin-top: 10vh;
+     }
+     .menu-contents ul a {
+         font-size: 2.3vh;
      }
      .showMenus{
          display: block;
-         width: 55%;
+         width: 65%;
      }
     .about-me{
         width:100%;
@@ -363,25 +409,62 @@ footer{
         margin-bottom: 0.5rem;
         position: sticky;
     }
+    
+    .content-in-brf button a{
+        font-size: 3.4vw;
+    }
+    .top h1{
+        font-size: 5.5vw;
+    }
 }
 /* for tablet */
 @media screen and (min-width:641px) and (max-width:1000px){
+    .top-all{
+        height: 20vh;
+    }
+    .goal-top{
+        font-size: 5vw;
+        height: 9vh;
+    }
+    .navbar{
+        height: 6vh;
+    }
+    .navbar a{
+        font-size: 2.8vw;
+        border-right: 1px solid white;
+    }
     .goal-top{
         position: sticky;
         top: 0px;
         z-index: 3;
-        font-size: 2.2vw;
+        font-size: 3.5vw;
+        height: 9vh;
     }
+    .navbar{
+        height: 6vh;
+    }
+    .menu{
+        height: 3vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
     .menu-contents-back{
         display: none;
     }
     .menu-contents{
        display:none;
        transition: 0.7s ease-in-out;
+       position: fixed;
+       top: 20vh;
+    }
+    .menu-contents ul a {
+        font-size: 3vw;
     }
     .showMenus{
         display: block;
-        width: 35%;
+        width: 55%;
     }
     .about-me{
         width:60%;
@@ -408,7 +491,9 @@ footer{
         width:40%;
         margin-left: 10px;
     }
-    
+    .content-in-brf button a{
+        font-size:1.9vw;
+    }
 }
 /* for laptop */
 @media screen and (min-width:1000px) and (max-width:1200px){
